@@ -1,0 +1,318 @@
+.circle-container{
+	text-align: center;
+	min-width: 108px;
+}
+
+.circle.circle-selected{
+	background-color: #0073E6;
+	border-color: #0073E6;
+	color: #FFF;
+}
+
+.circle.circle-unselected{
+	background-color: #707070;
+	border-color: #707070;
+	color: #FFF;
+}
+
+.float-right{
+	float:right;
+}
+.circle-container{
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+.circle{
+	width: 26px;
+	height: 28px;
+	margin-top: 8px;
+	padding-top: 5px;
+}
+
+.circle{
+	border-radius: 50%;
+	line-height: 1rem;
+	text-align: center;
+	display: inline-block;
+	margin-right: .25rem;
+	border: 1px solid black;
+
+}
+
+.flight-avail-header{
+	font-size: 38px;
+	font-family: inherit;
+	font-weight: 900;
+}
+
+.fare-info{
+	font-size: 17px;
+	word-spacing: 2px;
+	padding-top: 1px;
+}
+
+.flight-calendar{
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	margin-bottom: 30px;
+}
+
+.cal-prev{
+	cursor: pointer;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid #0073E6;
+	width:20px;
+	float: left;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 40px;
+}
+
+.flight-results{
+	border-spacing: 20px;
+}
+
+.calendar-body .calendar-days{
+	display: table;
+	table-layout: fixed;
+}
+
+.calendar-body .calendar-days{
+	display:table-cell;
+}
+.calendar-body{
+	margin-bottom: 20px;
+}
+.week-view{
+	border: 0px;
+}
+
+.flight-dates{
+	cursor: pointer;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	margin: 10px;
+	border-radius: 6px;
+	max-width:115px;
+	min-height: 125px;
+	font-size: 18px;
+}
+
+.flight-dates.selected{
+	border-color:#000;
+	border-radius: 2px;
+	box-shadow: 0 0 0 5px #000;
+}
+
+.cal-next{
+	cursor: pointer;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid #0073E6;
+	max-width: 20px;
+	float: right;
+	margin-right: 30px;
+	margin-top: 35px;
+}
+
+.price-chart,
+.flight_availabilty_itinerary {
+	padding: 0 15px;
+}
+
+	.price-chart .row.hidden-xs,
+	.price-chart .sortThisTable > .row {
+		border: 1px solid #ccc;
+		border-radius: 6px;
+		margin-bottom: 30px;
+		padding: 0;
+	}
+
+		.price-chart .row.hidden-xs > div > div,
+		.price-chart .sortThisTable > .row > div > div {
+			padding: 25px 0;
+		}
+
+	.price-chart .row.hidden-xs {
+		background-color: #ccc;
+		border: none !important;
+	}
+
+		.price-chart .row.hidden-xs > div > div,
+		.price-chart .row.hidden-xs > div > div a {
+			color: #000;
+			font-weight: 900;
+		}
+
+		.price-chart .row.hidden-xs div:last-child > div span,
+		.price-chart .row.hidden-xs div:nth-last-child(2) > div span {
+			display: block;
+			font-size: .6667rem;
+			line-height: 1rem;
+			font-weight: 400;
+		}
+		
+.info-chart{
+	height: 92px;
+}		
+.info-chart-font{
+	padding-top: 25px;
+	font-size: 18px;
+	font-family: inherit;
+	font-weight: 900;
+}		
+.departure-header{
+	font-size: 18px;
+	line-height: 20px;
+	text-transform: uppercase;
+	margin-top: 1.5rem;
+	margin-bottom: .25rem;
+	font-family: inherit;
+	font-weight: 900;
+}
+
+.departure-info{
+	font-size: 32px;
+	line-height: 38px;
+	margin-bottom: 45px;
+	font-family: inherit;
+	font-weight: 900;
+}
+
+.date-header{
+	width:inherit;
+}
+
+.cal-date{
+	font-size: 20px;
+	font-family: inherit;
+	font-weight: 900;
+	text-transform: uppercase;
+	padding-top: 10px;
+	padding-left: 15px;
+	padding-bottom: 10px;
+}
+.selection-container>li{
+	display:inline;
+}
+.date-container{
+	padding-top: 5px;
+}
+
+.ticket-container{
+	padding-top:70px;
+	float:right;
+}
+.no-flight-date{
+	background-color: #DDD;
+	border: 1px solid #ddd;
+	margin: 10px;
+	border-radius: 6px;
+	max-width:115px;
+	min-height: 125px;
+	pointer-events: none;
+	font-size: 18px;
+	font-family: inherit;
+}
+
+.flight-info-row{
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-bottom: 30px;
+	font-size: 22px;
+	font-weight: 400;
+	height: 75px;
+}
+
+.flight-info-row > div{
+	padding-top: 30px;
+}
+
+.flight-info-row > a{
+	font-size: 16px;
+	font-weight: 0;
+	color: #0073E6;
+}
+
+.itinerary-header{
+	font-size: 32px;
+	line-height: 37px;
+	font-family: inherit;
+	font-weight: 900;
+	margin-bottom: 10px;
+}
+
+.flight-info-row
+.itinerary-header{
+	font-size: 32px;
+	line-height:37px;
+	font-family: inherit;
+	font-weight: 900;
+}
+
+.itinerary-info{
+	border: 1px solid #ddd;
+	border-radius: 6px;
+}
+
+.itinerary-info{
+	font-size: 18px;
+}
+
+.itinerary-table{
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+.itinerary-table > tbody > tr > td{
+	padding: 8px;
+	line-height: 1.42857143;
+	vertical-align: top;
+}
+
+.double-check{
+	font-size: 28px;
+	line-height: 34px;
+	text-align:center;
+	margin-top: 1.39rem;
+	margin-bottom: .7rem;
+	font-family: inherit;
+	font-weight: 900;
+}
+.continue-btn{
+	font-size: 21px;
+	min-height: 2.78rem;
+	padding: 10px 18px;
+	min-width: 7.5rem;
+	text-align: center;
+	color: #FFF;
+	background-color: #0073E6;
+	border-color: #0073E6;
+	text-transform: uppercase;
+	font-weight: 900;
+	display: inline-block;
+	margin-bottom: 0;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border-radius: 0;
+	white-space: nowrap;
+}
+
+.continue-btn:hover{
+		background-color: #0073E6;
+		border-color: #0073E6;
+		text-decoration: underline;
+	}
+	
+	.continue-btn:focus{
+		background-color: #0073E6 !important;
+		border-color: #0073E6 !important;
+	}

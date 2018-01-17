@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Spirit Airlines | </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" href="css/style.css"/>
+</head>
+	<body>
+		<header class="main_header container_fluid">
+			<nav class="navbar navbar-main navbar-spirit container">
+				<div class="row">
+					<div class="col-xs-12" style="padding:0; margin:0; height:0px;">
+						<div class="pull-right" style="margin-top: 0;">
+							<ul class="nav navbar-nav login-links help-links">
+								<li class="first hidden-xs">
+									<a id="loginlink" class="align-top" title="Sign In" href="#">Sign In</a>
+								</li>
+								<li class="need-help-link hidden-xs">
+									<a>Need Help</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#mobile-collapse2">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+					<a class="navbar-brand" href="#" tabindex="4">
+						<img src="images/spirit-logo.png"/>
+					</a>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav main-links">
+						<li>
+							<a class="nav-list">Book</a>
+						</li>
+						<li>
+							<a class="nav-list">My Trips</a>
+						</li>
+						<li>
+							<a class="nav-list">Check-In</a>
+						</li>
+						<li>
+							<a class="nav-list">Flight Status</a>
+						</li>
+					</ul>
+					<div class="pull-right nav-secondary-links hidden-sm">
+						<ul class="list-inline">
+                            <li class="secondary-link-first">
+                                <a href="#">Deals</a>
+                            </li>
+                            <li>
+                                <a href="#">$9 Fare Club</a>
+                            </li>
+                            <li>
+                                <a href="#">
+									Spirit 101
+								</a>
+                            </li>
+                            <li>
+                                <a href="#">Destinations</a>
+                            </li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="container_fluid carousel-container">
+			<div class="row">
+				<div id="spirit-carousel" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#spirit-carousel" data-slide-to="0" class="active"></li>
+						<li data-target="#spirit-carousel" data-slide-to="1"></li>
+						<li data-target="#spirit-carousel" data-slide-to="2"></li>
+					</ol>
+				
+					<div class="carousel-inner">
+						<div class="angled-overlay"></div>
+						<div class="item active">
+							<img class="img-carousel" src="images/img1.jpg"/>
+						</div>
+
+						<div class="item">
+							<img class="img-carousel" src="images/img2.png"/>
+						</div>
+
+						<div class="item">
+							<img class="img-carousel" src="images/img3.png"/>
+						</div>
+					</div>
+
+					<a class="left carousel-control" href="#spirit-carousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#spirit-carousel" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="container home_page">
+			<nav id ="main-nav-container" role="navigation">
+				<ul id="main-nav-tabs" class="nav nav-tabs nav-justified hidden-xs">
+					<li id="book-tab" class="active" role="presentation">
+						<a href="#book-tab-content" role="tab" data-toggle="tab" class="book-tab-text active">Book</a>
+					</li>
+					<li id="my-trips-tab" role="presentation">
+						<a href="#manage-travel-tab-content" role="tab" data-toggle="tab" class="book-tab-text">My Trips</a>
+					</li>
+					<li id="checkin-tab" role="presentation">
+						<a href="#checkin-tab-content" role="tab" data-toggle="tab" class="book-tab-text">Check-In</a>
+					</li>
+					<li id="flight-status-tab" role="presentation">
+						<a href="#flight-status-tab-content" role="tab" data-toggle="tab" class="book-tab-text">Flight Status</a>
+					</li>
+				</ul>
+			</nav>
+			<div id="main-nav-border-container"></div>
+			<div id="main-nav-content-container" class="tab-content hidden-xs">
+				<div id = "book-tab-content" class="tab-pane active in">
+					<ul id="book-tab-navbar" class="nav nav-pills nav-justified hidden-xs book-navbar">
+						<li class="book-flight-tab active" role="presentation">
+							<a href="#book-flight-tab" role="tab" data-toggle="tab">
+								Flight
+							</a>
+						</li>
+						<li class="book-vacation-tab" role="presentation">
+							<a href="#book-vacation-tab" role="tab" data-toggle="tab">
+								Vacation
+							</a>
+						</li>
+						<li class="book-car-tab" role="presentation">
+							<a href="#book-car-tab" role="tab" data-toggle="tab">
+								Car
+							</a>
+						</li>
+						<li class="book-hotel-tab" role="presentation">
+							<a href="#book-hotel-tab" role="tab" data-toggle="tab">
+								Hotel
+							</a>
+						</li>
+						<li id="book-cruise-tab" role="presentation">
+							<a href="#book-cruise-tab" role="tab" data-toggle="tab">
+								Cruise
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div id="book-flight-tab" class="tab-pane active in" role="tabpanel">
+							<article id="book-flight-content" class="active">
+								<form id="book-travel-form" method="post" action="#" th:action="@{/flight-search}" th:object="${flight}">
+									<fieldset>
+										<ul class="searchElems"></ul>
+										<div class="row selection-row">
+											<div class="col-sm-9" role="navigation">
+												<ul id="book-radio-box" class="list-inline details searchElems flightOnly" role="radiogroup">
+													<li class="field flightOnlyType roundTripFlight radio flightOnlyTypeForEnglish">
+														<input id="round-trip" class="radio-margin-fix" name="tripType" value="roundTrip" checked="checked" tabindex="23" type="radio"/>
+														<label class="for-check radio-text" for="round-trip">Round trip</label>
+													</li>
+													<li class="field flightOnlyType radio flightOnlyTypeForEnglish" style="visibility: visible;"> 
+														<input id="journeyOneWay" class="radio-margin-fix" name="tripType" value="oneWay" tabindex="24" type="radio"/>
+														<label class="for-check radio-text" for="journeyOneWay">One way</label>
+													</li>
+													<li class="field flightOnlyType radio flightOnlyTypeForEnglish">
+														<input id="journeyMultiCity" class="radio-margin-fix" name="tripType" value="multiCity" tabindex="25" type="radio"/>
+														<label class="for-check radio-text" for="journeyMultiCity">Multi-city</label>
+													</li>
+												</ul>
+											</div>
+											<div class="col-sm-3 slider-container">
+												<div class="slider-header">
+													<div>
+														<div class="slider">
+															<div id="slider-dollars" class="selected" data-slider-val="dollars">Dollars
+															</div>
+															<div id="slider-miles" data-slider-val="miles">Miles</div>
+														</div>
+													</div>
+												</div>
+											</div>				
+										</div>
+										<div id="returnOneway">
+											<ul class="searchElems">
+												<div class="row">
+													<div class="col-sm-5">
+														<li id="departCitySearch" class="field station-search form-group">
+															<label class="asterik label-font" for="departCityCodeSelect">
+																From*
+															</label>
+															<select id="departCityCodeSelect" class="form-control input-boxes select-flight-form" name="location-from" th:field="*{locationFrom}">
+                                                                <option value="">From where?</option>
+                                                           		<option value="BQN">Aguadilla, Puerto Rico (BQN)</option>
+                                                            	<option value="CAK">Akron/Canton, OH (CAK)</option>
+                                                            	<option value="AXM">Armenia, Colombia (AXM)</option>
+                                                            	<option value="AUA">Aruba, Aruba (AUA)</option>
+                                                            	<option value="ATL">Atlanta, GA (ATL)</option>
+                                                            	<option value="ACY">Atlantic City, NJ  (ACY)</option>
+                                                            	<option value="BWI">Baltimore, MD / Washington, DC AREA (BWI)</option>
+                                                            	<option value="BOG">Bogota, Colombia (BOG)</option>
+                                                            	<option value="BOS">Boston, MA (BOS)</option>
+                                                            	<option value="IAG">Buffalo, NY AREA / Niagara Falls, NY (IAG)</option>
+                                                            	<option value="SJD">Cabo San Lucas/Los Cabos, Mexico (SJD)</option>
+                                                            	<option value="CUN">Cancun, Mexico (CUN)</option>
+                                                            	<option value="CAK">Canton / Akron, OH (CAK)</option>
+                                                            	<option value="CTG">Cartagena, Colombia (CTG)</option>
+                                                            	<option value="CRW">Charleston, WV (CRW)</option>
+                                                            	<option value="ORD">Chicago, IL - O'Hare  (ORD)</option>
+                                                            	<option value="CLE">Cleveland, OH (CLE)</option>
+                                                            	<option value="CMH">Columbus, OH (CMH)</option>
+                                                            	<option value="DFW">Dallas/Ft. Worth, TX  (DFW)</option>
+                                                            	<option value="DEN">Denver, CO (DEN)</option>
+                                                            	<option value="DTW">Detroit, MI (DTW)</option>
+                                                            	<option value="FLL">Fort Lauderdale, FL / Miami, FL AREA  (FLL)</option>
+                                                            	<option value="RSW">Fort Myers, FL (RSW)</option>
+                                                            	<option value="GUA">Guatemala City, Guatemala (GUA)</option>
+                                                            	<option value="BDL">Hartford, CT (BDL)</option>
+                                                            	<option value="IAH">Houston, TX - Intercontinental (IAH)</option>
+                                                            	<option value="MCI">Kansas City, MO (MCI)</option>
+                                                            	<option value="KIN">Kingston, Jamaica (KIN)</option>
+                                                            	<option value="LAS">Las Vegas, NV (LAS)</option>
+                                                            	<option value="LBE">Latrobe, PA (LBE)</option>
+                                                            	<option value="LIM">Lima, Peru (LIM)</option>
+                                                            	<option value="LAX">Los Angeles, CA (LAX)</option>
+                                                            	<option value="SJD">Los Cabos, Mexico (SJD)</option>
+                                                            	<option value="MGA">Managua, Nicaragua (MGA)</option>
+                                                            	<option value="MDE">Medellin, Colombia (MDE)</option>
+                                                            	<option value="FLL">Miami, FL AREA / Fort Lauderdale, FL (FLL)</option>
+                                                            	<option value="MSP">Minneapolis/St. Paul, MN (MSP)</option>
+                                                            	<option value="MBJ">Montego Bay, Jamaica (MBJ)</option>
+                                                            	<option value="PBG">Montreal, Canada AREA / Plattsburgh, NY (PBG)</option>
+                                                            	<option value="MYR">Myrtle Beach, SC (MYR)</option>
+                                                            	<option value="MSY">New Orleans, LA (MSY)</option>
+                                                            	<option value="LGA">New York, NY - LaGuardia  (LGA)</option>
+                                                            	<option value="EWR">Newark, NJ (EWR)</option>
+                                                            	<option value="IAG">Niagara Falls, NY / Toronto, Canada AREA (IAG)</option>
+                                                            	<option value="OAK">Oakland, CA / San Francisco, CA AREA (OAK)</option>
+                                                            	<option value="MCO">Orlando, FL (MCO)</option>
+                                                            	<option value="PTY">Panama City, Panama (PTY)</option>
+                                                            	<option value="PHL">Philadelphia, PA (PHL)</option>
+                                                            	<option value="PHX">Phoenix/Sky Harbor, AZ (PHX)</option>
+                                                            	<option value="PIT">Pittsburgh, PA (PIT)</option>
+                                                            	<option value="PBG">Plattsburgh, NY / Montreal, Canada AREA  (PBG)</option>
+                                                            	<option value="PAP">Port-au-Prince, Haiti (PAP)</option>
+                                                            	<option value="PDX">Portland, OR (PDX)</option>
+                                                            	<option value="PUJ">Punta Cana, Dominican Republic (PUJ)</option>
+                                                            	<option value="RIC">Richmond, VA (RIC)</option>
+                                                            	<option value="SAN">San Diego, CA (SAN)</option>
+                                                            	<option value="OAK">San Francisco, CA AREA / Oakland, CA (OAK)</option>
+                                                            	<option value="SJD">San Jose del Cabo/Los Cabos, Mexico (SJD)</option>
+                                                            	<option value="SJO">San Jose, Costa Rica (SJO)</option>
+                                                            	<option value="SJU">San Juan, Puerto Rico (SJU)</option>
+                                                            	<option value="SAP">San Pedro Sula, Honduras (SAP)</option>
+                                                            	<option value="SAL">San Salvador, El Salvador (SAL)</option>
+                                                            	<option value="STI">Santiago, Dominican Republic (STI)</option>
+                                                            	<option value="SDQ">Santo Domingo, Dominican Republic (SDQ)</option>
+                                                            	<option value="SEA">Seattle-Tacoma, WA (SEA)</option>
+                                                            	<option value="SXM">St. Maarten, St. Maarten (SXM)</option>
+                                                            	<option value="STT">St. Thomas, U.S. Virgin Islands (STT)</option>
+                                                            	<option value="TPA">Tampa, FL (TPA)</option>
+                                                            	<option value="IAG">Toronto, Canada AREA / Niagara Falls, NY (IAG)</option>
+                                                            	<option value="BWI">Washington, DC AREA / Baltimore, MD (BWI)</option>
+                                                            	<option value="PBI">West Palm Beach, FL (PBI)</option>
+															</select>
+														</li>
+													</div>
+													<div class="col-sm-2 center-content 
+													text-center hidden-xs fromToArrow">
+														<div class="field station-search form-group">
+															<label></label>
+															<img src="images/arrow.png"/>
+														</div>
+													</div>
+													<div class="col-sm-5">
+														<li class="field station-search form-group">
+															<label class="asterik label-font" for="destCityCodeSelect">To*</label>
+															<select id="destCityCodeSelect" class="form-control input-boxes" tabindex="27" name="location-to" th:field="*{locationTo}">
+																<option value="">To where?</option>
+																<option value="BQN">Aguadilla, Puerto Rico (BQN)</option>
+                                                            	<option value="CAK">Akron/Canton, OH (CAK)</option>
+                                                            	<option value="AXM">Armenia, Colombia (AXM)</option>
+                                                            	<option value="AUA">Aruba, Aruba (AUA)</option>
+                                                            	<option value="ATL">Atlanta, GA (ATL)</option>
+                                                            	<option value="ACY">Atlantic City, NJ  (ACY)</option>
+                                                            	<option value="BWI">Baltimore, MD / Washington, DC AREA (BWI)</option>
+                                                            	<option value="BOG">Bogota, Colombia (BOG)</option>
+                                                            	<option value="BOS">Boston, MA (BOS)</option>
+                                                            	<option value="IAG">Buffalo, NY AREA / Niagara Falls, NY (IAG)</option>
+                                                            	<option value="SJD">Cabo San Lucas/Los Cabos, Mexico (SJD)</option>
+                                                            	<option value="CUN">Cancun, Mexico (CUN)</option>
+                                                            	<option value="CAK">Canton / Akron, OH (CAK)</option>
+                                                            	<option value="CTG">Cartagena, Colombia (CTG)</option>
+                                                            	<option value="CRW">Charleston, WV (CRW)</option>
+                                                            	<option value="ORD">Chicago, IL - O'Hare  (ORD)</option>
+                                                            	<option value="CLE">Cleveland, OH (CLE)</option>
+                                                            	<option value="CMH">Columbus, OH (CMH)</option>
+                                                            	<option value="DFW">Dallas/Ft. Worth, TX  (DFW)</option>
+                                                            	<option value="DEN">Denver, CO (DEN)</option>
+                                                            	<option value="DTW">Detroit, MI (DTW)</option>
+                                                            	<option value="FLL">Fort Lauderdale, FL / Miami, FL AREA  (FLL)</option>
+                                                            	<option value="RSW">Fort Myers, FL (RSW)</option>
+                                                            	<option value="GUA">Guatemala City, Guatemala (GUA)</option>
+                                                            	<option value="BDL">Hartford, CT (BDL)</option>
+                                                            	<option value="IAH">Houston, TX - Intercontinental (IAH)</option>
+                                                            	<option value="MCI">Kansas City, MO (MCI)</option>
+                                                            	<option value="KIN">Kingston, Jamaica (KIN)</option>
+                                                            	<option value="LAS">Las Vegas, NV (LAS)</option>
+                                                            	<option value="LBE">Latrobe, PA (LBE)</option>
+                                                            	<option value="LIM">Lima, Peru (LIM)</option>
+                                                            	<option value="LAX">Los Angeles, CA (LAX)</option>
+                                                            	<option value="SJD">Los Cabos, Mexico (SJD)</option>
+                                                            	<option value="MGA">Managua, Nicaragua (MGA)</option>
+                                                            	<option value="MDE">Medellin, Colombia (MDE)</option>
+                                                            	<option value="FLL">Miami, FL AREA / Fort Lauderdale, FL (FLL)</option>
+                                                            	<option value="MSP">Minneapolis/St. Paul, MN (MSP)</option>
+                                                            	<option value="MBJ">Montego Bay, Jamaica (MBJ)</option>
+                                                            	<option value="PBG">Montreal, Canada AREA / Plattsburgh, NY (PBG)</option>
+                                                            	<option value="MYR">Myrtle Beach, SC (MYR)</option>
+                                                            	<option value="MSY">New Orleans, LA (MSY)</option>
+                                                            	<option value="LGA">New York, NY - LaGuardia  (LGA)</option>
+                                                            	<option value="EWR">Newark, NJ (EWR)</option>
+                                                            	<option value="IAG">Niagara Falls, NY / Toronto, Canada AREA (IAG)</option>
+                                                            	<option value="OAK">Oakland, CA / San Francisco, CA AREA (OAK)</option>
+                                                            	<option value="MCO">Orlando, FL (MCO)</option>
+                                                            	<option value="PTY">Panama City, Panama (PTY)</option>
+                                                            	<option value="PHL">Philadelphia, PA (PHL)</option>
+                                                            	<option value="PHX">Phoenix/Sky Harbor, AZ (PHX)</option>
+                                                            	<option value="PIT">Pittsburgh, PA (PIT)</option>
+                                                            	<option value="PBG">Plattsburgh, NY / Montreal, Canada AREA  (PBG)</option>
+                                                            	<option value="PAP">Port-au-Prince, Haiti (PAP)</option>
+                                                            	<option value="PDX">Portland, OR (PDX)</option>
+                                                            	<option value="PUJ">Punta Cana, Dominican Republic (PUJ)</option>
+                                                            	<option value="RIC">Richmond, VA (RIC)</option>
+                                                            	<option value="SAN">San Diego, CA (SAN)</option>
+                                                            	<option value="OAK">San Francisco, CA AREA / Oakland, CA (OAK)</option>
+                                                            	<option value="SJD">San Jose del Cabo/Los Cabos, Mexico (SJD)</option>
+                                                            	<option value="SJO">San Jose, Costa Rica (SJO)</option>
+                                                            	<option value="SJU">San Juan, Puerto Rico (SJU)</option>
+                                                            	<option value="SAP">San Pedro Sula, Honduras (SAP)</option>
+                                                            	<option value="SAL">San Salvador, El Salvador (SAL)</option>
+                                                            	<option value="STI">Santiago, Dominican Republic (STI)</option>
+                                                            	<option value="SDQ">Santo Domingo, Dominican Republic (SDQ)</option>
+                                                            	<option value="SEA">Seattle-Tacoma, WA (SEA)</option>
+                                                            	<option value="SXM">St. Maarten, St. Maarten (SXM)</option>
+                                                            	<option value="STT">St. Thomas, U.S. Virgin Islands (STT)</option>
+                                                            	<option value="TPA">Tampa, FL (TPA)</option>
+                                                            	<option value="IAG">Toronto, Canada AREA / Niagara Falls, NY (IAG)</option>
+                                                            	<option value="BWI">Washington, DC AREA / Baltimore, MD (BWI)</option>
+                                                            	<option value="PBI">West Palm Beach, FL (PBI)</option>
+															</select>
+														</li>
+													</div>
+												</div>
+											</ul>
+											<ul class="details searchElems">
+												<div class="row">
+													<div id="onewayDepartContainer" class="col-sm-5">
+														<li id="departdateli" class="field col-sm-6 form-group">
+																<label id="departDateLabel" class="asterik label-font" for="departDate">Depart*</label>
+																<input id="depart-date" class="datepicker-input form-control hasDatepicker input-boxes" name="depart-date" th:field="*{departDate}" placeholder="mm/dd/yyyy" type="text"/>
+														</li>
+														<li id="returndateli" class="field col-sm-6 form-group">
+															<label class="asterik label-font" for="returnDateDisplay">Return*</label>
+															<input id="return-date" class="datepicker-input form-control hasDatepicker input-boxes" name="return-date" placeholder="mm/dd/yyyy" type="text"/>
+														</li>
+													</div>
+													<div id="onewaySpacer" class="col-sm-1"></div>
+													<div class="col-sm-6">
+														<div id="onewayAdultsContainer">
+															<li id="adultsli" class="field col-sm-4 form-group">
+																<label class="asterik label-font" for="paxAdults">
+																	Adults*
+																</label>
+																<select id="paxAdults" class="form-control input-boxes" tabindex="33"> 
+																	<option value="1">1 adult</option>
+																	<option value="2">2 adults</option>
+																	<option value="3">3 adults</option>
+																	<option value="4">4 adults</option>
+																	<option value="5">5 adults</option>
+																	<option value="6">6 adults</option>
+																	<option value="7">7 adults</option>
+																	<option value="8">8 adults</option>
+																	<option value="9">9 adults</option>
+																</select>
+															</li>
+														</div>
+														<div id="onewayChildContainer">
+															<li id="childrenli" class="field col-sm-4 form-group">
+																<label class="asterik label-font" for="paxMinors">
+																	Children*
+																</label>
+																<select id="paxMinors" class="form-control input-boxes" tabindex="31"> 
+																	<option value="1">1 child</option>
+																	<option value="2">2 children</option>
+																	<option value="3">3 children</option>
+																	<option value="4">4 children</option>
+																	<option value="5">5 children</option>
+																	<option value="6">6 children</option>
+																	<option value="7">7 children</option>
+																	<option value="8">8 children</option>
+																	<option value="9">9 children</option>
+																</select>
+															</li>
+														</div>
+													</div>
+												</div>
+											</ul>
+										</div>
+									</fieldset>
+									<div class="row">
+										<div class="hidden-xs col-sm-4 col-md-2 form-group">
+											<a class="flight-info-links" href="#" tabindex="33"><i class="fa fa-map-marker"></i> Where we fly</a>
+										</div>
+										<div id="optionalServicesDiv" class="col-xs-12 col-sm-6 col-md-6 form-group">
+											<a class="flight-info-links" href="#"><i class="fa fa-briefcase"></i> New Bag prices and Optional services</a>
+										</div>
+										<p class="col-xs-12 col-md-4 actions submitbtnform ontabpress form-group">
+											<button class="pull-right btn btn-primary search-flight-btn" type="submit" tabindex="35">
+												Search Flights
+											</button>
+										</p>
+									</div>
+								</form>
+							</article>
+						</div>
+						<div id="book-vacation-tab" class="tab-pane">
+							<article id="book-vacation-content" class="active">
+								<form id="book-vacation-form" method="post" action="#" th:action="@{/flight-search}">
+									<div class="row selection-row">
+											<div class="col-sm-9" role="navigation">
+												<ul class="list-inline details searchElems flightOnly" role="radiogroup">
+													<li class="field flightOnlyType roundTripFlight radio flightOnlyTypeForEnglish">
+														<input id="flight-car" class="radio-margin-fix" name="tripType" value="flight-car" checked="checked" tabindex="23" type="radio"/>
+															<label class="for-check radio-text" for="flight-car">Flight + Car</label>
+													</li>
+													<li class="field flightOnlyType radio flightOnlyTypeForEnglish" style="visibility: visible;"> 
+														<input id="flight-hotel" class="radio-margin-fix" name="tripType" value="flight-hotel" tabindex="24" type="radio"/>
+															<label class="for-check radio-text" for="flight-hotel">Flight + Hotel</label>
+													</li>
+													<li class="field flightOnlyType radio flightOnlyTypeForEnglish">
+														<input id="flight-hotel-car" class="radio-margin-fix" name="tripType" value="flight-car-hotel" tabindex="25" type="radio"/>
+															<label class="for-check radio-text" for="flight-hotel-car">Flight + Hotel + Car</label>
+													</li>
+												</ul>
+											</div>
+									</div>
+									<div id="returnOneway">
+										<ul class="searchElems">
+											<div class="row">
+												<div class="col-sm-5">
+													<li id="departCitySearch" class="">
+														<label class="label-font asterisk" for="departCityCodeSelect">From</label>
+														<select id="departCityCodeSelect" class="form-control input-boxes" name="from" tabindex="29">
+															<option value="">From Where?</option>
+														</select>
+													</li>
+												</div>
+												<div class="col-sm-2 center-content text-center hidden-xs">
+													<div class="field station-search form-group">
+															<label></label>
+															<img src="images/arrow.png"/>
+														</div>
+												</div>
+												<div class="col-sm-5">
+													<li class="field station-search form-group">
+														<label class="label-font asterisk" for="destCityCodeSelect">
+															To
+														</label>
+														<select id="destCityCodeSelect" class="form-control input-boxes" name="to" tabindex="30">
+															<option value="">To Where?</option>
+														</select>
+													</li>
+												</div>
+											</div>
+										</ul>
+										<ul class="details searchElems">
+												<div class="row">
+													<div id="onewayDepartContainer" class="col-sm-5">
+														<li id="departdateli" class="field col-sm-6 form-group">
+															<label id="departDateLabel" class="asterik" for="departDate">Depart</label>
+															<input id="departDate" class="datepicker-input form-control hasDatepicker input-boxes" name="depart" placeholder="mm/dd/yyyy" type="text"/>
+														</li>
+														<li id="returndateli" class="field col-sm-6 form-group">
+															<label class="asterik" for="returnDateDisplay">Return</label>
+															<input id="returnDate" class="datepicker-input form-control hasDatepicker input-boxes" name="returnDate" placeholder="mm/dd/yyyy" type="text"/>
+														</li>
+													</div>
+													<div id="onewaySpacer" class="col-sm-1"></div>
+													<div class="col-sm-6">
+														<div id="onewayAdultsContainer">
+															<li id="adultsli" class="field col-sm-4 form-group">
+																<label class="label-font asterik" for="paxAdults">
+																	Adults
+																</label>
+																<select id="paxAdults" class="form-control input-boxes" tabindex="33"> 
+																	<option value="1">1 adult</option>
+																	<option value="2">2 adults</option>
+																	<option value="3">3 adults</option>
+																	<option value="4">4 adults</option>
+																	<option value="5">5 adults</option>
+																	<option value="6">6 adults</option>
+																	<option value="7">7 adults</option>
+																	<option value="8">8 adults</option>
+																	<option value="9">9 adults</option>
+																</select>
+															</li>
+														</div>
+														<div id="onewayChildContainer">
+															<li id="childrenli" class="field col-sm-4 form-group">
+																<label class="asterik label-font" for="paxMinors">
+																	Children
+																</label>
+																<select id="paxMinors" class="form-control input-boxes" tabindex="31"> 
+																	<option value="1">1 child</option>
+																	<option value="2">2 children</option>
+																	<option value="3">3 children</option>
+																	<option value="4">4 children</option>
+																	<option value="5">5 children</option>
+																	<option value="6">6 children</option>
+																	<option value="7">7 children</option>
+																	<option value="8">8 children</option>
+																	<option value="9">9 children</option>
+																</select>
+															</li>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div id="onewayHotelContainer col-sm-3 form-group">
+														<div id="hotelRoomsDiv">
+															<label class="asterisk label-font" for="hotelRoomCount">Hotel</label>
+															<select id="hotelRoomCount" class="form-control" name="hotelRoomCount"></select>
+														</div>
+													</div>
+													<div id="onewayDriverContainer" class="col-sm-3 form-group">
+														<div id="driversAgeDiv">
+															<label class="asterisk label-font" for="driversAge">Driver's Age</label>
+															<select id="driversAge" class="form-control" name="driversAge"></select>
+														</div>
+													</div>
+												</div>
+											</ul>
+									</div>
+								</form>
+							</article>
+						</div>
+						<div id="book-car-tab" class="tab-pane"></div>
+						<div id="book-hotel-tab" class="tab-pane"></div>
+						<div id="book-cruise-tab" class="tab-pane"></div>
+					</div>
+				</div>
+				<div id="manage-travel-tab-content" class="tab-pane fade main-tab-content">
+					<article id="change-flight">
+						<form id ="change-flight-form" method="post">
+							<div class="my-trips-left-div col-sm-6">
+								<div class="row">
+									<header class="col-xs-12 col-sm-11 my-trips-header">Manage Travel</header>
+								</div>
+								<div class="row">
+									<p class="col-xs-12 col-sm-11">Change or cancel your flight, and add extras like bags or seat assignments</p>
+								</div>
+								<div class="row">
+									<p class="col-xs-12 col-sm-11">Your <a class="main-tab-hyperlink" href="#">Confirmation Code</a> can be found in your confirmation email.</p>
+								</div>
+								<div class="row">
+									<p class="col-xs-12 col-sm-11"><a class="main-tab-hyperlink" href="#">How to find your Confirmation Code</a></p>
+								</div>
+							</div>
+							<div class="my-trips-right-div col-sm-6">
+								<div class="row form-group">
+									<div class="col-xs-12">
+										<label class="asterik label-font" for="changeLastName">Traveler's Last Name</label>
+										<input id="changeLastName" class="form-control input-boxes" name="changeLastName" type="text"/>
+									</div>
+									<div class="col-xs-12">
+										<label class="asterik label-font" for="changeConfirmationCode" >Confirmation Code</label>
+										<input id="changeConfirmationCode" class="form-control input-boxes" name="changeConfirmationCode" type="text"/>
+									</div>
+								</div>
+								<div class="row">
+									<button id="change-flight-button" class="btn btn-primary btn-sm search-flight-btn pull-right">Continue</button>
+								</div>
+							</div>
+						</form>
+					</article>
+				</div>
+				<div id="checkin-tab-content" class="tab-pane fade main-tab-content">
+					<div class="checkin-left-div col-sm-6">
+						<div class="row">
+							<header class="col-xs-12 col-sm-11 my-trips-header">Online check-in</header>
+						</div>
+						<div class="row">
+							<p class="col-xs-12 col-sm-11">Check-in online and print your boarding pass at home to save money at the airport. Online check-in begins 24 hours and closes 1 hour before your flight.</p>
+						</div>
+						<div class="row">
+							<p class="col-xs-12 col-sm-11">This is a good time to add any extras, like bags or seat assignments.</p>
+						</div>
+						<div class="row">
+							<p class="col-xs-12 col-sm-11">Enter last name and <a class="main-tab-hyperlink" href="#">Confirmation Code</a> to get going!</p>
+						</div>
+						<div class="row">
+							<p class="col-xs-12 col-sm-11"><a class="main-tab-hyperlink" href="#">How to find your Confirmation Code</a></p>
+						</div>
+					</div>
+					<div class="checkin-right-div col-sm-6">
+						<div class="row form-group">
+							<div class="col-xs-12">
+								<label class="asterik label-font" for="changeLastName">Traveler's Last Name</label>
+								<input id="changeLastName" class="form-control input-boxes" name="changeLastName" type="text"/>
+							</div>
+							<div class="col-xs-12">
+								<label class="asterik label-font" for="changeConfirmationCode" >Confirmation Code</label>
+								<input id="changeConfirmationCode" class="form-control input-boxes" name="changeConfirmationCode" type="text"/>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<button id="change-flight-button" class="btn btn-primary btn-sm search-flight-btn pull-right">Check-in</button>
+					</div>
+				</div>
+				<div id="flight-status-tab-content" class="tab-pane fade main-tab-content">
+					<div class="flight-status-left-div col-sm-6">
+						<div class="row">
+							<header class="col-xs-12 col-sm-11 my-trips-header">Check Flight Status</header>
+						</div>
+						<div class="row">
+							<p class="col-xs-12 col-sm-11">On-time? Delayed? Find arrival and departure info here.</p>
+						</div>
+						<div class="row">
+							<p class="col-xs-12 col-sm-11">Search By:</p>
+						</div>
+						<div class="row">
+							<ul class="list-inline details searchElems flight-status-radio-row">
+								<li>
+									<input id="round-trip" class="radio-margin-fix" name="tripType" value="roundTrip" checked="checked" tabindex="23" type="radio"/>
+									<label class="for-check radio-text" for="round-trip">Destination</label>
+								</li>
+								<li>
+									<input id="round-trip" class="radio-margin-fix" name="tripType" value="roundTrip" checked="checked" tabindex="23" type="radio"/>
+									<label class="for-check radio-text" for="round-trip">Flight Number</label>
+								</li>
+							</ul>
+							</div>
+						</div>
+					<div class="flight-status-right-div col-sm-6">
+						<div class="row">
+							<label class="label-font" for="flight-date">Date*</label>
+							<select id="flight-date" class="form-control input-boxes"></select>
+						</div>
+						<div class="row">
+							<label class="label-font" for="flight-status-from">From*</label>
+							<select id="flight-status-from" class="form-control input-boxes"></select>
+						</div>
+						<div class="row">
+							<label class="label-font" for="flight-status-to">To*</label>
+							<select id="flight-status-to" class="form-control input-boxes"></select>
+						</div>
+					</div>
+					<div class="row">
+						<button id="change-flight-button" class="btn btn-primary btn-sm search-flight-btn pull-right">Check Status</button>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div class="container">
+		<a href="#"><img class="col-sm-4 marketing-img-sm" src="images/marketing-img1.png"/></a>
+		<a href="#"><img class="col-sm-4 marketing-img-sm" src="images/marketing-img2.png"/></a>
+		<a href="#"><img class="col-sm-4 marketing-img-sm" src="images/marketing-img3.png"/></a>
+		<a href="#"><img class="col-sm-12 marketing-img-lg" src="images/marketing-img4.png"/></a>
+	</div>
+	<footer id="homerfooter" class="main-footer container-fluid">
+		<div class="inner_footer container">
+			<div class="row">
+				<div class="col-xs-12 col-md-8">
+					<div class="row fs-footer">
+						<div class="col-xs-12 col-sm-6 col-md-3" role="navigation">
+							<h3 class="footer-htext">FREE SPIRIT</h3>
+							<a href="#" tabindex="40">Learn More to Earn More</a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3" role="navigation">
+							<h3 class="footer-htext">$9 Fare Club</h3>
+							<a href="#">Members Save Most</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="footer-nav col-xs-12 col-sm-6 col-md-3 nav-about" role="navigation">
+							<h4 class="footer-htext">
+								Get To Know Us
+							</h4>
+							<ul>
+								<li>
+									<a href="#" tabindex="42">About Us</a>
+								</li>
+								<li>
+									<a href="#" tabindex="43">Investor Relations</a>
+								</li>
+								<li>
+									<a href="#" tabindex="44">Careers</a>
+								</li>
+								<li>
+									<a href="#" tabindex="45">Where We Fly</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-nav col-xs-12 col-sm-6 col-md-3 nav-help" role="navigation">
+							<h4 class="footer-htext">
+								Need Help?
+							</h4>
+							<ul>
+								<li>
+									<a href="#" tabindex="46">Help Center</a>
+								</li>
+								<li>
+									<a href="#" tabindex="47">Contact Us</a>
+								</li>
+								<li>
+									<a href="#" tabindex="48">Groups</a>
+									<span> | </span>
+								</li>
+								<li>
+									<a href="#" tabindex="49">Deals</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-nav col-xs-12 col-sm-6 col-md-3 nav-partners" role="navigation">
+							<h4 class="footer-htext">
+								Partners
+							</h4>
+							<ul>
+								<li>
+									<a href="#" tabindex="50">Travel Agents</a>
+								</li>
+								<li>
+									<a href="#" tabindex="51">Media Center</a>
+								</li>
+								<li>
+									<a href="#" tabindex="52">Advertise With Us</a>
+								</li>
+								<li>
+									<a href="#" tabindex="53">Team Login</a>
+								</li>
+								<li>
+									<a href="#" tabindex="54">Team Travel/OA Jumpseat</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-nav col-xs-12 col-sm-6 col-md-3 nav-legal" role="navigation">
+							<h4 class="footer-htext">
+								Policies and Legal
+							</h4>
+							<ul>
+								<li>
+									<a href="#" tabindex="50">Legal</a>
+								</li>
+								<li>
+									<a href="#" tabindex="51">Contract of Carriage</a>
+								</li>
+								<li>
+									<a href="#" tabindex="52">Customer Service Plan</a>
+								</li>
+								<li>
+									<a href="#" tabindex="53">Tarmac Delay Plan</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-4 right-section">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="row">
+								<div class="col-xs-12">
+									<h4 class="footer-htext social">
+										Connect with Us
+									</h4>
+								</div>
+							</div>
+							<div class="row">
+								<ul class="social-btns">
+									<li>
+										<a href="https://www.facebook.com/SpiritAirlines/" tabindex="59"><i class="fa fa-facebook-official social-btn-img fa-2x"></i></a>
+									</li>
+									<li>
+										<a href="https://twitter.com/spiritairlines">
+											<i class="fa fa-twitter social-btn-img fa-2x"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    	<a href="https://www.instagram.com/spiritairlines/">
+                                        	<i class="fa fa-instagram social-btn-img fa-2x"></i>
+                                        </a>
+                                   	</li>
+                                   	<li>
+                                    	<a href="https://www.youtube.com/channel/UCrOwgmAwcw8r8xs34RiIuJg">
+                                       		<i class="fa fa-youtube-play social-btn-img fa-2x"></i>
+                                       	</a>
+                              		</li>
+                                  	<li>
+                                    	<a href="http://morego.spirit.com/ ">
+                                       		<i class="fa fa-tumblr social-btn-img fa-2x"></i>
+                                        </a>
+                                  	</li>
+                       			</ul>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<h4 class="footer-htext">
+										Download Our Mobile App
+									</h4>
+								</div>
+							</div>
+							<div class="row app-section xs-tight-xs">
+								<div class="col-xs-6 text-center">
+									<a href="https://itunes.apple.com/us/app/spirit-airlines-check-in/id1256613786?mt=8">
+										<img src="images/apple_app_icon.png"/>
+									</a>
+								</div>
+								<div class="col-xs-6 text-center">
+									<a href="https://play.google.com/store/apps/details?id=com.navitaire.nps.spirit">
+										<img src="images/google_app_icon.png"/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row tagline">
+				<div class="col-xs-12 col-md-6">
+					<img src="images/Spirit-Logo-White.png" class="footer-logo"/>
+				</div>
+				<div class="col-xs-12 col-md-6 copyright">
+					Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 2017
+					Spirit Airlines, Inc. All Rights Reserved.
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>   
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript">
+		$("document").ready(function (){
+			$('#depart-date').datetimepicker({
+				format: "MM/DD/YYYY"
+			});
+			
+			
+			$('#return-date').datetimepicker({
+				format:"MM/DD/YYYY"
+			});
+			
+			$('#book-radio-box').change(function(){
+				var selectedValue = $('input[name="tripType"]:checked').val();
+				switch(selectedValue){
+					case "roundTrip":
+						$("#returndateli").show();
+						break;
+					case "oneWay":
+						$("#returndateli").hide();
+						break;
+					case "multiCity":
+						break;
+				}
+			});
+			
+		});
+	</script>
+</body>
+</html>		

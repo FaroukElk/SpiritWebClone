@@ -1,0 +1,525 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,900' rel='stylesheet' type='text/css'/>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="css/search-results.css"/>
+	</head>
+	<body>
+		<header class="main_header container-fluid">
+			<nav class="navbar navbar-main navbar-spirit container">
+				<div class="row">
+					<div class="col-xs-12" style="padding:0; margin:0; height:0px;">
+						<div class="pull-right" style="margin-top: 0;">
+							<ul class="nav navbar-nav login-links help-links">
+								<li class="first">
+									<a id="loginlink" class="align-top" title="Sign In" href="#">Sign In</a>
+								</li>
+								<li class="help hidden-xs">
+									<a>Need Help
+									<img src=""/>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#mobile-collapse2">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+					<a class="navbar-brand" href="index" tabindex="4">
+						<img src="images/spirit-logo.png"/>
+					</a>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav main-links">
+						<li>
+							<a class="nav-list">Book</a>
+						</li>
+						<li>
+							<a class="nav-list">My Trips</a>
+						</li>
+						<li>
+							<a class="nav-list">Check-In</a>
+						</li>
+						<li>
+							<a class="nav-list">Flight Status</a>
+						</li>
+					</ul>
+					<div class="pull-right">
+						<ul class="list-inline">
+                            <li>
+                                <a href="#">Deals</a>
+                            </li>
+                            <li>
+                                <a href="#">$9 Fare Club</a>
+                            </li>
+                            <li>
+                                <a href="#">
+									Spirit 101
+								</a>
+                            </li>
+                            <li>
+                                <a href="#">Destinations</a>
+                            </li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div id="content">
+			<div class="container-fluid breadcrumbs">
+				<div class="container">
+					<aside class="breadcrumbs">
+						<div class="circle-container visible-md-inline-block visible-lg-inline-block">
+							<div class="t002-stepTitle">Flight</div>
+							<div class="circle circle-selected">1</div>
+						</div>
+						<div class="circle-container visible-md-inline-block visible-lg-inline-block">
+							<div>Hotel</div>
+							<div class="circle circle-unselected hidetabindex">2</div>
+						</div>
+						<div class="circle-container visible-md-inline-block visible-lg-inline-block">
+							<div>Car</div>
+							<div class="circle circle-unselected hidetabindex">3</div>
+						</div>
+						<div class="circle-container visible-md-inline-block visible-lg-inline-block">
+							<div>Activity</div>
+							<div class="circle circle-unselected hidetabindex">4</div>
+						</div>
+						<div class="circle-container visible-md-inline-block visible-lg-inline-block">
+							<div>Login</div>
+							<div class="circle circle-unselected hidetabindex">5</div>
+						</div>
+						<div class="circle-container visible-md-inline-block visible-lg-inline-block">
+							<div>Baggage</div>
+							<div class="circle circle-unselected hidetabindex">6</div>			
+						</div>
+						<div class="circle-container visible-md-inline-block visible-lg-inline-block">
+							<div>Seats</div>
+							<div class="circle circle-unselected hidetabindex">7</div>
+						</div>
+						<div class="circle-container visible-md-inline-block visible-lg-inline-block">
+							<div>Extras</div>
+							<div class="circle circle-unselected hidetabindex">8</div>
+						</div>
+						<div class="circle-container visible-md-inline-block visible-lg-inline-block">
+							<div>Payment</div>
+							<div class="circle circle-unselected hidetabindex">9</div>
+						</div>
+						<div class="circle-container visible-md-inline-block visible-lg-inline-block">
+							<div>Confirmation</div>
+							<div class="circle circle-unselected hidetabindex">10</div>
+						</div>
+					</aside>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<h2 class="flight-avail-header">Flight Availability</h2>
+				</div>
+				<div class="row">
+					<p class="fare-info">Our fares are fully unbundled. A ticket with us gets you and a personal item from A to B. We call this the Bare Fare. Additional charges for baggage, </p> <p class="fare-info">advance seat assignments, and any changes apply only if you add these options. Fares listed are per person, are non-refundable and include all taxes and</p> <p class="fare-info">fees.</p>
+				</div>
+				<div class="row">
+						<div>
+							<h5 class="departure-header">Select date and time of your flight</h5>
+						</div>
+						<div>
+							<div class="departure-info">
+								<span id="flight-location-from"></span>
+								<img src="images/arrow.png"/>
+								<span id="flight-location-to"></span>
+							</div>
+						</div>
+						<div class="flight-calendar">
+							<div class="calendar-header">
+								<div id="date-header" class="cal-date h5"></div>
+							</div>
+							<div class="row calendar-body">
+								<div class="col-xs-1 cal-prev"></div>
+								<div class="col-xs-10">
+								<ul id="selection-container" class="selection-container">
+									<li id="date1" class="col-xs-2 selected">
+										<div id="date-container1" class="date-container">										
+										</div>
+										<div id="ticket-price1" class="ticket-container">
+										</div>
+									</li>
+									<li id="date2" class="col-xs-2">
+										<div id="date-container2" class="date-container">										
+										</div>
+										<div id="ticket-price2" class="ticket-container">
+										</div>
+									</li>
+									<li id="date3" class="col-xs-2">
+										<div id="date-container3" class="date-container">										
+										</div>
+										<div id="ticket-price3" class="ticket-container">
+										</div>
+									</li>
+									<li id="date4" class="col-xs-2">
+										<div id="date-container4" class="date-container">										
+										</div>
+										<div id="ticket-price4" class="ticket-container">
+										</div>
+									</li>
+									<li id="date5" class="col-xs-2">
+										<div id="date-container5" class="date-container">										
+										</div>
+										<div id="ticket-price5" class="ticket-container">
+										</div>
+									</li>
+									<li id="date6" class="col-xs-2">
+										<div id="date-container6" class="date-container">										
+										</div>
+										<div id="ticket-price6" class="ticket-container">
+										</div>
+									</li>
+								</ul>
+								</div>
+								<div class="col-xs-1 cal-next"></div>
+							</div>
+						</div>
+				</div>
+					<div id="marketSelect1">
+						
+						<fieldset class="price-chart">
+							<div class="row hidden-xs info-chart">
+								<div class="col-sm-2 col-xs-6">
+									<p class="h6 info-chart-font">Depart</p>
+								</div>
+								<div class="col-sm-2 col-xs-6">
+									<p class="h6 info-chart-font">Arrive</p>
+								</div>
+								<div class="col-sm-2 col-xs-6">
+									<p class="h6 info-chart-font">Stops</p>
+								</div>
+								<div class="col-sm-2 col-xs-6">
+									<p class="h6 info-chart-font">Big Front Seat</p>
+								</div>
+								<div class="col-sm-2 col-xs-6">
+									<p class="h6 info-chart-font">9$ Fare Club</p>
+								</div>
+								<div class="col-sm-2 col-xs-6">
+									<p class="h6 info-chart-font">Standard</p>
+								</div>
+							</div>
+							<div class="row flight-info-row">
+								<div id="depart-info-row" class="col-sm-2 col-xs-6">
+								</div>
+								<div id="arrive-info-row" class="col-sm-2 col-xs-6">
+								</div>
+								<div id="stops-info-row" class="col-sm-2 col-xs-6">
+									<a href="#">Nonstop</a>
+								</div>
+								<div id="bfs-info-row" class="col-sm-2 col-xs-6">
+									<a href="#">Availability</a>
+								</div>
+								<div id="fare-club-info-row" class="col-sm-2 col-xs-6">
+								</div>
+								<div id="standard-info-row" class="col-sm-2 col-xs-6">
+								</div>
+							</div>
+										
+						</fieldset>
+						
+					</div>
+			<form th:action="@{/flight-confirm}">
+				<fieldset>
+					<div id="itinerary-container">
+						<div class="itinerary-header">Your Itinerary</div>
+						<div class="row itinerary-info">
+							<div class="col-sm-4">
+								<table class="itinerary-table">
+									<tr>
+										<td id="itin-from">
+										</td>
+										<td id="itin-from-code">
+										</td>
+									</tr>
+									<tr>
+										<td id="itin-to"></td>
+										<td id="itin-to-code"></td>
+									</tr>
+								</table>
+							</div>
+							<div class="col-sm-4">
+								<table class="itinerary-table">
+								<tr>
+									<td id="itin-depart-weekday"></td>
+									
+								</tr>
+								<tr>
+									<td id="itin-depart-date"></td>
+								</tr>
+								</table>
+							</div>
+							<div class="col-sm-4">
+								<table class="itinerary-table">
+									<tr>
+										<td>Departure:</td>
+										<td id="itin-depart-time"></td>
+									</tr>
+									<tr>
+										<td>Arrival:</td>
+										<td id="itin-arrival-time"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						</div>
+						<div class="double-check">Double Check Your Itinerary! Then let's book it.</div>
+						<div class="text-center">
+							<button class="btn btn-primary continue-btn" type="submit">Continue</button>
+						</div>
+						<input type="hidden" id="flightID" name="flightID"/>
+				</fieldset>
+				</form>
+				</div>
+			</div>
+			<footer id="homerfooter" class="main-footer container-fluid">
+		<div class="inner_footer container">
+			<div class="row">
+				<div class="col-xs-12 col-md-8">
+					<div class="row fs-footer">
+						<div class="col-xs-12 col-sm-6 col-md-3" role="navigation">
+							<h3 class="footer-htext">FREE SPIRIT</h3>
+							<a href="#" tabindex="40">Learn More to Earn More</a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-3" role="navigation">
+							<h3 class="footer-htext">$9 Fare Club</h3>
+							<a href="#">Members Save Most</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="footer-nav col-xs-12 col-sm-6 col-md-3 nav-about" role="navigation">
+							<h4 class="footer-htext">
+								Get To Know Us
+							</h4>
+							<ul>
+								<li>
+									<a href="#" tabindex="42">About Us</a>
+								</li>
+								<li>
+									<a href="#" tabindex="43">Investor Relations</a>
+								</li>
+								<li>
+									<a href="#" tabindex="44">Careers</a>
+								</li>
+								<li>
+									<a href="#" tabindex="45">Where We Fly</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-nav col-xs-12 col-sm-6 col-md-3 nav-help" role="navigation">
+							<h4 class="footer-htext">
+								Need Help?
+							</h4>
+							<ul>
+								<li>
+									<a href="#" tabindex="46">Help Center</a>
+								</li>
+								<li>
+									<a href="#" tabindex="47">Contact Us</a>
+								</li>
+								<li>
+									<a href="#" tabindex="48">Groups</a>
+								</li>
+								<li>
+									<a href="#" tabindex="49">Deals</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-nav col-xs-12 col-sm-6 col-md-3 nav-partners" role="navigation">
+							<h4 class="footer-htext">
+								Partners
+							</h4>
+							<ul>
+								<li>
+									<a href="#" tabindex="50">Travel Agents</a>
+								</li>
+								<li>
+									<a href="#" tabindex="51">Media Center</a>
+								</li>
+								<li>
+									<a href="#" tabindex="52">Advertise With Us</a>
+								</li>
+								<li>
+									<a href="#" tabindex="53">Team Login</a>
+								</li>
+								<li>
+									<a href="#" tabindex="54">Team Travel/OA Jumpseat</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer-nav col-xs-12 col-sm-6 col-md-3 nav-legal" role="navigation">
+							<h4 class="footer-htext">
+								Partners
+							</h4>
+							<ul>
+								<li>
+									<a href="#" tabindex="50">Legal</a>
+								</li>
+								<li>
+									<a href="#" tabindex="51">Contract of Carriage</a>
+								</li>
+								<li>
+									<a href="#" tabindex="52">Customer Service Plan</a>
+								</li>
+								<li>
+									<a href="#" tabindex="53">Tarmac Delay Plan</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-4 right-section">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="row">
+								<div class="col-xs-12">
+									<h4 class="footer-htext social">
+										Connect with Us
+									</h4>
+								</div>
+							</div>
+							<div class="row">
+								<ul class="social-btns">
+									<li>
+										<a href="https://www.facebook.com/SpiritAirlines/" tabindex="59"><i class="fa fa-facebook-official social-btn-img fa-2x"></i></a>
+									</li>
+									<li>
+										<a href="https://twitter.com/spiritairlines">
+											<i class="fa fa-twitter social-btn-img fa-2x"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                    	<a href="https://www.instagram.com/spiritairlines/">
+                                        	<i class="fa fa-instagram social-btn-img fa-2x"></i>
+                                        </a>
+                                   	</li>
+                                   	<li>
+                                    	<a href="https://www.youtube.com/channel/UCrOwgmAwcw8r8xs34RiIuJg">
+                                       		<i class="fa fa-youtube-play social-btn-img fa-2x"></i>
+                                       	</a>
+                              		</li>
+                                  	<li>
+                                    	<a href="http://morego.spirit.com/ ">
+                                       		<i class="fa fa-tumblr social-btn-img fa-2x"></i>
+                                        </a>
+                                  	</li>
+                       			</ul>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<h4 class="footer-htext">
+										Download Our Mobile App
+									</h4>
+								</div>
+							</div>
+							<div class="row app-section xs-tight-xs">
+								<div class="col-xs-6 text-center">
+									<a href="https://itunes.apple.com/us/app/spirit-airlines-check-in/id1256613786?mt=8">
+										<img src="images/apple_app_icon.png"/>
+									</a>
+								</div>
+								<div class="col-xs-6 text-center">
+									<a href="https://play.google.com/store/apps/details?id=com.navitaire.nps.spirit">
+										<img src="images/google_app_icon.png"/>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row tagline">
+				<div class="col-xs-12 col-md-6">
+					<img src="images/Spirit-Logo-White.png" class="footer-logo"/>
+				</div>
+				<div class="col-xs-12 col-md-6 copyright">
+					Copyright <span class="glyphicon glyphicon-copyright-mark"></span> 2017
+					Spirit Airlines, Inc. All Rights Reserved.
+				</div>
+			</div>
+		</div>
+	</footer>
+			
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/functions.js"></script>
+		<script type="text/javascript" th:inline="javascript">
+			$("document").ready(function() {
+				
+				
+				
+				/*<![CDATA[*/
+
+		    		var flights = /*[[${flights}]]*/;
+		   			
+
+		   		/*]]>*/
+		   		
+					var from = flights[0]["locationFrom"]
+					var to = flights[0]["locationTo"];
+		   		
+					
+					var fullFrom = getFullLocationName(from);
+					var fullTo = getFullLocationName(to);
+
+					var date = flights[0]["departDate"];
+					var day = parseInt(date.substring(8,10));
+
+					var datePlus5 = /*[[${datePlus5}]]*/;
+
+					var daysOfFlights = getDaysOfFlights(flights);
+					var header = getDateHeader(date, datePlus5);
+					
+					$("#flight-location-from").html(fullFrom);
+					$("#flight-location-to").html(fullTo);
+					
+					$("#date-header").html(header);
+					setFlightSelection(flights, daysOfFlights, date, day);
+					setSearchItinerary(flights, 0);
+					$("#date1").click(function(){
+						uncheckSelected();
+						$("#date1").addClass("selected");
+						setSearchItinerary(flights, 0);
+					});
+					
+					$("#date2").click(function(){
+						uncheckSelected();
+						$("#date2").addClass("selected");
+						setSearchItinerary(flights, 1);
+					});
+					
+					$("#date3").click(function(){
+						uncheckSelected();
+						$("#date3").addClass("selected");
+						setSearchItinerary(flights, 2);
+					});
+					
+					$("#date4").click(function(){
+						uncheckSelected();
+						$("#date4").addClass("selected");
+						setSearchItinerary(flights, 3);
+					});
+					
+					$("#date5").click(function(){
+						uncheckSelected();
+						$("#date5").addClass("selected");
+						setSearchItinerary(flights, 4);
+						
+					});
+					
+			});
+		</script>
+	</body>
+</html>
